@@ -4,7 +4,7 @@ import type { Character, Story, StoryData } from './types';
 import ComicPromptForm from './components/ComicPromptForm';
 import PromptOutput from './components/PromptOutput';
 import StoryManager from './components/StoryManager';
-import { generateComicPrompts } from './services/geminiService';
+import { generateComicPrompts } from './services/aiService';
 import LoadingSpinner from './components/LoadingSpinner';
 
 const LOCAL_STORAGE_KEY = 'le-scenariste-ia-stories-v1';
@@ -52,7 +52,7 @@ const App: React.FC = () => {
   const [stories, setStories] = useState<Story[]>([]);
   const [activeStoryId, setActiveStoryId] = useState<string | null>(null);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
-  
+
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -224,9 +224,9 @@ const App: React.FC = () => {
             error={error}
           />
         </main>
-        
+
         <footer className="text-center mt-12 text-slate-500 text-sm">
-            <p>Powered by Gemini API. Version 1.3</p>
+          <p>Powered by Perplexity AI. Version 1.4</p>
         </footer>
       </div>
     </div>
