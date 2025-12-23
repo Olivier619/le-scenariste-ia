@@ -1,0 +1,5 @@
+{
+  "name": "Le Scénariste IA",
+  "description": "An AI-powered application to generate structured and detailed visual prompts for comic book creation based on a scenario, character descriptions, and stylistic references.",
+  "requestFramePermissions": []
+}
